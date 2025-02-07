@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Syllabus Management</h1>
+            <button class="add-syllabus-btn" type="button" onclick="openModal()">Add New Syllabus</button>
+        </div>
+
+        <div class="filters">
+            <select class="filter-select" id="pattern">
+                <option value="">All Patterns</option>
+                <option value="2024">2024 Pattern</option>
+                <option value="2019">2019 Pattern</option>
+            </select>
+            <select class="filter-select" id="stream">
+                <option value="">All Streams</option>
+                <option value="computer">Computer Engineering</option>
+                <option value="it">Information Technology</option>
+                <option value="mechanical">Mechanical Engineering</option>
+                <option value="electrical">Electronics and Telecommunication Engineering</option>
+                <option value="civil">Civil Engineering</option>
+            </select>
+            <select class="filter-select" id="year">
+                <option value="">All Years</option>
+                <option value="FE">First Year</option>
+                <option value="SE">Second Year</option>
+                <option value="TE">Third Year</option>
+                <option value="BE">Fourth Year</option>
+            </select>
+        </div>
+
+        <div class="syllabus-grid">
+            <!-- Example Syllabus Cards -->
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <div>
+                        <div class="syllabus-title">Computer Engineering</div>
+                        <div class="syllabus-pattern">2019 Pattern • First Year</div>
+                    </div>
+                </div>
+                <div class="syllabus-info">
+                    <span class="syllabus-size">2.3 MB</span>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <div>
+                        <div class="syllabus-title">Computer Engineering</div>
+                        <div class="syllabus-pattern">2019 Pattern • Second Year</div>
+                    </div>
+                </div>
+                <div class="syllabus-info">
+                    <span class="syllabus-size">1.8 MB</span>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <div>
+                        <div class="syllabus-title">Computer Engineering</div>
+                        <div class="syllabus-pattern">2019 Pattern • Third Year</div>
+                    </div>
+                </div>
+                <div class="syllabus-info">
+                    <span class="syllabus-size">1.8 MB</span>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+
+            <div class="syllabus-card">
+                <div class="syllabus-header">
+                    <div>
+                        <div class="syllabus-title">Computer Engineering</div>
+                        <div class="syllabus-pattern">2024 Pattern • Fourth Year</div>
+                    </div>
+                </div>
+                <div class="syllabus-info">
+                    <span class="syllabus-size">1.8 MB</span>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+
+            <!-- Add Syllabus Modal -->
+            <div class="modal" id="addSyllabusModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add New Syllabus</h2>
+                        <button class="close-btn" onclick="closeModal()">&times;</button>
+                    </div>
+                    <form id="syllabusForm">
+                        <div class="form-group">
+                            <label for="streamInput">Stream</label>
+                            <select id="streamInput" required>
+                                <option value="">Select Stream</option>
+                                <option value="computer">Computer Engineering</option>
+                                <option value="it">Information Technology</option>
+                                <option value="mechanical">Mechanical Engineering</option>
+                                <option value="entc">Electronics & Telecommunication Engineering</option>
+                                <option value="civil">Civil Engineering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="patternInput">Pattern</label>
+                            <select id="patternInput" required>
+                                <option value="">Select Pattern</option>
+                                <option value="2024">2024 Pattern</option>
+                                <option value="2019">2019 Pattern</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="yearInput">Year</label>
+                            <select id="yearInput" required>
+                                <option value="">Select Year</option>
+                                <option value="FE">First Year</option>
+                                <option value="SE">Second Year</option>
+                                <option value="TE">Third Year</option>
+                                <option value="BE">Fourth Year</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="syllabusFile">Upload Syllabus (PDF)</label>
+                            <input type="file" id="syllabusFile" accept=".pdf" required>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+                            <button type="submit" class="submit-btn">Add Syllabus</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
