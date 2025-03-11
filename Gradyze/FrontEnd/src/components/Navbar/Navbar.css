@@ -6,10 +6,9 @@
 }
 
 .nav-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.2rem; /* Increase font size for all text */
 }
@@ -37,9 +36,32 @@
   color: #2563eb;
 }
 
-/* Mobile Responsive */
+/* Tablet Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+
+  .nav-container{
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 20vw; /* Adjust size */
+    height: auto;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-container{
+    justify-content: space-between;
+  }
+  .logo img {
+    width: 30vw; /* Adjust size */
+    height: auto;
   }
 }

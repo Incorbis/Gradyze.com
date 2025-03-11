@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar" id="home">
+    <nav className="py-3 pl-3 navbar" id="home">
       <div className="nav-container">
         <div className="logo">
           <img src={Navlogo}></img>

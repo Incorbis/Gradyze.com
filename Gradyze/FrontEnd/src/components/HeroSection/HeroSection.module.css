@@ -54,6 +54,7 @@
 
 /* Semi-transparent background box */
 .heroContent {
+  margin: auto;
   position: relative;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
@@ -64,10 +65,11 @@
   text-align: center; /* Align text to the left */
   animation: slideIn 1s ease-in-out;
   color: white; /* Ensure text is white */
-  margin-left: 240px;
+  /* margin-left: 240px; */
 }
 
 .heroContent h1 {
+  line-height: 3.5rem;
   font-size: 3rem;
   margin-bottom: 1rem;
   animation: fadeIn 1.5s ease-in-out;
@@ -81,12 +83,13 @@
 
 /* Buttons container */
 .hero_Buttons {
-  margin-left: 100px;
+  /* margin-left: 100px; */
   display: flex;
   flex-direction: row; /* Stack buttons vertically */
+  justify-content: center;
   /* Align buttons to the left */
   gap: 1rem;
-  margin-right: 80px;
+  /* margin-right: 80px; */
 }
 
 /* Button styles */
@@ -150,7 +153,7 @@
   }
 
   .heroContent {
-    max-width: 100%;
+    max-width: 60%;
     text-align: center;
   }
 
